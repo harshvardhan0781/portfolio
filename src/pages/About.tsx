@@ -35,27 +35,6 @@ const About = () => {
               ))}
             </div>
             
-            <h2 className="text-2xl font-bold mt-10">Experience</h2>
-            <div className="space-y-6 mt-6">
-              <div className="border-l-2 border-primary/30 pl-6 py-2">
-                <h3 className="text-xl font-medium">Senior Product Designer</h3>
-                <p className="text-muted-foreground">Design Studio Inc. • 2020 - Present</p>
-                <p className="mt-2">Leading the design of digital products and experiences for various clients across tech, finance, and healthcare industries.</p>
-              </div>
-              
-              <div className="border-l-2 border-primary/30 pl-6 py-2">
-                <h3 className="text-xl font-medium">UI/UX Designer</h3>
-                <p className="text-muted-foreground">Tech Innovations • 2018 - 2020</p>
-                <p className="mt-2">Designed user interfaces and experiences for mobile and web applications, focusing on usability and accessibility.</p>
-              </div>
-              
-              <div className="border-l-2 border-primary/30 pl-6 py-2">
-                <h3 className="text-xl font-medium">Freelance Designer</h3>
-                <p className="text-muted-foreground">Self-employed • 2016 - 2018</p>
-                <p className="mt-2">Worked with startups and small businesses to create branding, websites, and digital marketing materials.</p>
-              </div>
-            </div>
-            
             <h2 className="text-2xl font-bold mt-10">Education</h2>
             <div className="space-y-4 mt-6">
               <div>
