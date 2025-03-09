@@ -1,35 +1,48 @@
 
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
 import { ThemeToggle } from "./ThemeToggle";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { scrollToSection } from "@/lib/scrollUtils";
 
 const navItems = [
-  { name: "About", path: "/about" },
-  { name: "Projects", path: "/projects" },
-  { name: "Contact", path: "/contact" }
+  { name: "About", id: "about" },
+  { name: "Projects", id: "projects" },
+  { name: "Contact", id: "contact" }
 ];
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const location = useLocation();
+  const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
+      
+      // Find which section is currently in view
+      const sections = navItems.map(item => item.id).concat("hero");
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu when route changes
-  useEffect(() => {
+  const handleNavClick = (id: string) => {
+    scrollToSection(id);
     setMobileMenuOpen(false);
-  }, [location.pathname]);
+  };
 
   return (
     <header
@@ -41,32 +54,32 @@ export function Navbar() {
       )}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 flex justify-between items-center">
-        <Link 
-          to="/" 
+        <button 
+          onClick={() => handleNavClick("hero")}
           className="text-lg md:text-xl font-medium tracking-tight transition-opacity duration-300 hover:opacity-80"
         >
-          <span className="sr-only">Home</span>
+          <span className="sr-only">Back to top</span>
           John Doe
-        </Link>
+        </button>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => (
-            <Link
+            <button
               key={item.name}
-              to={item.path}
+              onClick={() => handleNavClick(item.id)}
               className={cn(
                 "text-sm font-medium relative transition-colors duration-300",
                 "after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5",
                 "after:scale-x-0 after:origin-bottom-right after:transition-transform after:duration-300",
                 "hover:after:scale-x-100 hover:after:origin-bottom-left",
-                location.pathname === item.path 
+                activeSection === item.id 
                   ? "text-primary after:bg-primary after:scale-x-100" 
                   : "text-muted-foreground hover:text-foreground after:bg-primary/80"
               )}
             >
               {item.name}
-            </Link>
+            </button>
           ))}
           <ThemeToggle />
         </div>
@@ -99,18 +112,18 @@ export function Navbar() {
       >
         <div className="p-6 space-y-4 flex flex-col">
           {navItems.map((item) => (
-            <Link
+            <button
               key={item.name}
-              to={item.path}
+              onClick={() => handleNavClick(item.id)}
               className={cn(
-                "py-3 px-4 text-base font-medium rounded-md transition-colors duration-300",
-                location.pathname === item.path
+                "py-3 px-4 text-base font-medium rounded-md transition-colors duration-300 text-left",
+                activeSection === item.id
                   ? "bg-primary/10 text-primary"
                   : "text-muted-foreground hover:bg-primary/5 hover:text-foreground"
               )}
             >
               {item.name}
-            </Link>
+            </button>
           ))}
         </div>
       </div>

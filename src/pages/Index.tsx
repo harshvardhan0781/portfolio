@@ -8,10 +8,18 @@ import { ContactSection } from "@/components/sections/Contact";
 const Index = () => {
   return (
     <Layout>
-      <Hero />
-      <AboutSection />
-      <ProjectsSection />
-      <ContactSection />
+      <section id="hero">
+        <Hero />
+      </section>
+      <section id="about">
+        <AboutSection />
+      </section>
+      <section id="projects">
+        <ProjectsSection />
+      </section>
+      <section id="contact">
+        <ContactSection />
+      </section>
     </Layout>
   );
 };
