@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 import { Menu, X } from "lucide-react";
@@ -8,6 +7,7 @@ import { scrollToSection } from "@/lib/scrollUtils";
 
 const navItems = [
   { name: "About", id: "about" },
+  { name: "Skills", id: "skills" },
   { name: "Projects", id: "projects" },
   { name: "Contact", id: "contact" }
 ];

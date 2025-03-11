@@ -2,6 +2,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { Hero } from "@/components/home/Hero";
 import { AboutSection } from "@/components/sections/About";
+import { SkillsSection } from "@/components/sections/Skills";
 import { ProjectsSection } from "@/components/sections/Projects";
 import { ContactSection } from "@/components/sections/Contact";
 
@@ -13,6 +14,9 @@ const Index = () => {
       </section>
       <section id="about">
         <AboutSection />
+      </section>
+      <section id="skills">
+        <SkillsSection />
       </section>
       <section id="projects">
         <ProjectsSection />
