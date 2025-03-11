@@ -1,11 +1,8 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export function AboutSection() {
-  return (
-    <section id="about" className="py-20 px-4">
+  return <section id="about" className="py-20 px-4">
       <div className="max-w-5xl mx-auto">
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="w-full md:w-2/5">
@@ -33,15 +30,11 @@ export function AboutSection() {
             </div>
             <div className="mt-8">
               <Button asChild className="group" variant="ghost">
-                <Link to="/about">
-                  Learn more about me
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
+                
               </Button>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
