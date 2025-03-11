@@ -3,7 +3,6 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { scrollToSection } from "@/lib/scrollUtils";
-
 const projects = [{
   id: 1,
   title: "Minimal Portfolio",
@@ -26,10 +25,8 @@ const projects = [{
   image: "/placeholder.svg",
   link: "/projects"
 }];
-
 export function ProjectsSection() {
-  return (
-    <section id="projects" className="py-20 px-4 bg-secondary/50">
+  return <section id="projects" className="py-20 px-4 bg-secondary/50">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl font-bold tracking-tight">Selected Projects</h2>
@@ -39,10 +36,9 @@ export function ProjectsSection() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div key={project.id} className={cn("group relative bg-background rounded-lg overflow-hidden border border-border/50 transition-all duration-300", "hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1", "animate-fade-in")} style={{
-              animationDelay: `${index * 150}ms`
-            }}>
+          {projects.map((project, index) => <div key={project.id} className={cn("group relative bg-background rounded-lg overflow-hidden border border-border/50 transition-all duration-300", "hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1", "animate-fade-in")} style={{
+          animationDelay: `${index * 150}ms`
+        }}>
               <div className="aspect-[4/3] bg-muted overflow-hidden">
                 <div className="w-full h-full bg-gradient-to-br from-primary/5 to-transparent"></div>
               </div>
@@ -58,19 +54,14 @@ export function ProjectsSection() {
               <Link to={project.link} className="absolute inset-0 w-full h-full focus:outline-none" aria-label={`View ${project.title} project details`}>
                 <span className="sr-only">View project</span>
               </Link>
-            </div>
-          ))}
+            </div>)}
         </div>
         
         <div className="mt-12 text-center">
           <Button asChild className="group">
-            <Link to="/projects">
-              View all projects
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
