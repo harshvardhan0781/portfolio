@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { scrollToSection } from "@/lib/scrollUtils";
 
 export function Hero() {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -46,6 +47,10 @@ export function Hero() {
     return () => observer.disconnect();
   }, []);
 
+  const handleScrollToProjects = () => {
+    scrollToSection("projects");
+  };
+
   return (
     <section className="min-h-[85vh] flex items-center justify-center relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
@@ -70,11 +75,13 @@ export function Hero() {
         </p>
         
         <div ref={ctaRef} className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button asChild size="lg" className="rounded-full px-8">
-            <Link to="/projects">
-              View my work
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+          <Button 
+            size="lg" 
+            className="rounded-full px-8"
+            onClick={handleScrollToProjects}
+          >
+            View my work
+            <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
           <Button asChild variant="outline" size="lg" className="rounded-full px-8">
             <Link to="/contact">Get in touch</Link>
