@@ -9,7 +9,7 @@ export function AboutSection() {
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden bg-muted animate-fade-in">
                 {/* Placeholder image - replace with your photo */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"></div>
+                
               </div>
               <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-full bg-primary/5 -z-10"></div>
             </div>
