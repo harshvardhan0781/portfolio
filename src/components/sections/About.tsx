@@ -10,13 +10,13 @@ export function AboutSection() {
         <div className="flex flex-col items-center text-center">
           <h2 className="text-3xl font-bold tracking-tight">About Me</h2>
           <div className="mt-6 space-y-4 text-muted-foreground max-w-2xl mx-auto">
-            <p>
+            <p className="text-lg">
               I'm a multidisciplinary designer and developer with over 5 years of experience creating digital products that are both beautiful and functional.
             </p>
-            <p>
+            <p className="text-lg">
               My approach combines minimalist aesthetics with user-centered design principles to create experiences that feel intuitive and elegant.
             </p>
-            <p>
+            <p className="text-lg">
               When I'm not designing or coding, you'll find me exploring new technologies, practicing photography, or hiking in the mountains.
             </p>
           </div>
