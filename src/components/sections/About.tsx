@@ -7,10 +7,7 @@ export function AboutSection() {
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="w-full md:w-2/5">
             <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden bg-muted animate-fade-in">
-                {/* Placeholder image - replace with your photo */}
-                
-              </div>
+              
               <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-full bg-primary/5 -z-10"></div>
             </div>
           </div>
