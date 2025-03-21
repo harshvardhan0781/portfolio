@@ -14,7 +14,7 @@ export function Layout({ children }: LayoutProps) {
       </main>
       <footer className="py-8 px-4 mt-16 border-t border-border/50">
         <div className="max-w-7xl mx-auto text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} John Doe. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Harshvardhan. All rights reserved.</p>
         </div>
       </footer>
     </div>

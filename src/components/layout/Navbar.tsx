@@ -59,7 +59,7 @@ export function Navbar() {
           className="text-lg md:text-xl font-medium tracking-tight transition-opacity duration-300 hover:opacity-80"
         >
           <span className="sr-only">Back to top</span>
-          John Doe
+          Harshvardhan
         </button>
 
         {/* Desktop Navigation */}

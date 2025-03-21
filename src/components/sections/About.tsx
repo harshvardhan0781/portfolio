@@ -1,7 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+
 
 export function AboutSection() {
   return (
@@ -11,13 +10,13 @@ export function AboutSection() {
           <h2 className="text-3xl font-bold tracking-tight">About Me</h2>
           <div className="mt-6 space-y-4 text-muted-foreground max-w-2xl mx-auto">
             <p className="text-lg">
-              I'm a multidisciplinary designer and developer with over 5 years of experience creating digital products that are both beautiful and functional.
+            I am a passionate Software Engineer with expertise in full-stack development, AI integration, and scalable system design.
             </p>
             <p className="text-lg">
-              My approach combines minimalist aesthetics with user-centered design principles to create experiences that feel intuitive and elegant.
+            I specialize in building efficient, user-friendly applications using modern technologies.
             </p>
             <p className="text-lg">
-              When I'm not designing or coding, you'll find me exploring new technologies, practicing photography, or hiking in the mountains.
+            With a strong problem-solving mindset, I continuously explore new innovations to create impactful solutions that enhance productivity and user experience.
             </p>
           </div>
           <div className="mt-8">

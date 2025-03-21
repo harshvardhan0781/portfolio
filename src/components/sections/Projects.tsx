@@ -1,29 +1,22 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { scrollToSection } from "@/lib/scrollUtils";
-const projects = [{
-  id: 1,
-  title: "Minimal Portfolio",
-  description: "A clean and minimal portfolio website designed for photographers and visual artists.",
-  tags: ["UI/UX", "Web Design", "Development"],
-  image: "/placeholder.svg",
-  link: "/projects"
-}, {
+
+const projects = [ {
   id: 2,
-  title: "E-commerce Dashboard",
-  description: "An intuitive dashboard for managing products, orders, and customer data.",
-  tags: ["Dashboard", "Analytics", "React"],
-  image: "/placeholder.svg",
-  link: "/projects"
+  title: "RedisStash",
+  description: "A basic chat application for real-time messaging between users.",
+  tags: ["Web app", "kinde", "redis"],
+  image: "/RedisStash.png",
+  link: "https://redis-chata-app-klgj.vercel.app/"
 }, {
   id: 3,
-  title: "Mobile Banking App",
-  description: "A secure and user-friendly mobile banking application with elegant interactions.",
-  tags: ["Mobile", "UI Design", "FinTech"],
-  image: "/placeholder.svg",
-  link: "/projects"
+  title: "Taskly",
+  description: "A Taskly a simple to-do app for adding, managing, and tracking tasks efficiently.",
+  tags: ["Web App", "UI Design", "Next.js"],
+  image: "/Taskly.png",
+  link: "https://tasklymanager-three.vercel.app/"
 }];
 export function ProjectsSection() {
   return <section id="projects" className="py-20 px-4 bg-secondary/50">
@@ -35,12 +28,14 @@ export function ProjectsSection() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => <div key={project.id} className={cn("group relative bg-background rounded-lg overflow-hidden border border-border/50 transition-all duration-300", "hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1", "animate-fade-in")} style={{
           animationDelay: `${index * 150}ms`
         }}>
               <div className="aspect-[4/3] bg-muted overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-primary/5 to-transparent"></div>
+                <div className="w-full h-full bg-gradient-to-br from-primary/5 to-transparent object-cover">
+                <img src={project.image} alt="" className="w-full h-full" />
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-medium">{project.title}</h3>

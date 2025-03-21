@@ -53,8 +53,8 @@ export function ContactSection() {
               </div>
               <div>
                 <h3 className="text-lg font-medium">Email</h3>
-                <p className="mt-1 text-muted-foreground">hello@johndoe.com</p>
-                <a href="mailto:hello@johndoe.com" className="mt-2 inline-flex items-center text-sm text-primary hover:underline">
+                <p className="mt-1 text-muted-foreground">harshvardhansinghrawat011@gmail.com</p>
+                <a href="mailto:harshvardhansinghrawat011@gmail.com" className="mt-2 inline-flex items-center text-sm text-primary hover:underline">
                   Send an email
                   <ArrowRight className="ml-1 h-3 w-3" />
                 </a>
@@ -69,10 +69,10 @@ export function ContactSection() {
                 <h3 className="text-lg font-medium">Social Media</h3>
                 <p className="mt-1 text-muted-foreground">Connect with me on social platforms</p>
                 <div className="mt-3 flex space-x-4">
-                  <a href="#" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
+                  <a href="https://x.com/Harshva54359431" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
                     Twitter
                   </a>
-                  <a href="#" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
+                  <a href="www.linkedin.com/in/harshvardhan0781" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
                     LinkedIn
                   </a>
                   
